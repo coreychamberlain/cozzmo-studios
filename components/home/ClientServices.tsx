@@ -41,7 +41,7 @@ export default function ClientServices() {
           transition={{ duration: 0.6 }}
         >
           <h2 className="text-3xl font-semibold text-white mb-12">What We Can Help With</h2>
-          <p>Whether you need a brand-new website, updates to an existing one, or ongoing support, we offer flexible services tailored to your business.</p>
+          <p  className="text-zinc-300 mb-12">Whether you need a brand-new website, updates to an existing one, or ongoing support, we offer flexible services tailored to your business.</p>
           <div className="grid md:grid-cols-2 gap-8">
             {services.map((service, i) => (
               <motion.div
