@@ -55,7 +55,7 @@ export default function Hero() {
           transition={{ delay: 1.0, duration: 0.6 }}
           className="text-zinc-300 text-lg max-w-2xl"
         >
-          We help small businesses get online with fast, modern, professional websites — built to look great, perform well, and grow with your business. We help small businesses get online with fast, modern, professional websites — built to look great, perform well, and grow with your business.
+          We help small businesses get online with fast with modern, professional websites — built to look great, perform well, and grow with your business. We handle everything from start to finish — domain registration, hosting setup, professional email configuration, and building your custom website. Get your complete online presence established with one trusted partner. Ready to get started?
         </motion.p>
 
         {/* Buttons */}
