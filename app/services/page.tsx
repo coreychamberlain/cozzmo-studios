@@ -1,6 +1,8 @@
 import Container from "@/components/Container";
 import FadeInUp from "@/components/ui/FadeInUp";
 import Hero from "@/components/Hero";
+import P from "@/components/typography/Paragraph";
+import H2 from "@/components/typography/H2";
 
 const services = [
   {
@@ -56,10 +58,10 @@ export default function ServicesPage() {
         {services.map((service, index) => (
           <FadeInUp key={service.slug} className="space-y-4" delay={index * 0.2}>
             <section id={service.slug}>
-              <h2 className="text-2xl font-semibold text-white">{service.title}</h2>
-              <p className="text-zinc-300">{service.intro}</p>
-              <p className="text-zinc-400">{service.extra}</p>
-              <p className="mt-2 font-semibold text-primary">{service.price}</p>
+              <H2>{service.title} </H2>
+              <P>{service.intro}</P>
+              <P>{service.extra}</P>
+              <P className="mt-2 font-semibold !text-primary">{service.price}</P>
             </section>
           </FadeInUp>
         ))}

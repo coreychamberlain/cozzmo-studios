@@ -2,6 +2,9 @@
 
 import { motion } from "framer-motion";
 import Link from "next/link";
+import P from "../typography/Paragraph";
+import H2 from "../typography/H2";
+import H3 from "../typography/H3";
 
 const services = [
   {
@@ -40,8 +43,12 @@ export default function ClientServices() {
           viewport={{ once: true, amount: 0.3 }}
           transition={{ duration: 0.6 }}
         >
-          <h2 className="text-3xl font-semibold text-white mb-12">What We Can Help With</h2>
-          <p  className="text-zinc-300 mb-12">Whether you need a brand-new website, updates to an existing one, or ongoing support, we offer flexible services tailored to your business.</p>
+          <H2>What We Can Help With</H2>
+          <P className="mb-12">
+            Whether you need a brand-new website, updates to an existing one, or
+            ongoing support, we offer flexible services tailored to your
+            business.
+          </P>
           <div className="grid md:grid-cols-2 gap-8">
             {services.map((service, i) => (
               <motion.div
@@ -53,8 +60,8 @@ export default function ClientServices() {
                 className="p-6 border border-zinc-800 rounded-xl bg-zinc-900 hover:bg-zinc-800 hover:scale-105 hover:border-primary transition-transform transition-colors shadow-lg"
               >
                 <Link href={`/services#${service.slug}`} scroll={false}>
-                  <h3 className="text-xl font-medium text-white">{service.title}</h3>
-                  <p className="mt-2 text-zinc-300">{service.intro}</p>
+                  <H3>{service.title}</H3>
+                  <P className="mt-2">{service.intro}</P>
                 </Link>
               </motion.div>
             ))}

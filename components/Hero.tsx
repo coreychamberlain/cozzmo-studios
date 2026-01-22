@@ -2,6 +2,8 @@
 
 import FadeInUp from "./ui/FadeInUp";
 import Image from "next/image";
+import P from "@/components/typography/Paragraph";
+import H1 from "@/components/typography/H1";
 
 interface HeroProps {
   title: string;
@@ -17,9 +19,9 @@ export default function Hero({ title, intro, extra, imageSrc, className = "" }: 
       <div className="max-w-6xl mx-auto px-6 flex flex-col md:flex-row items-center gap-8 md:gap-16">
         {/* Text */}
         <FadeInUp className="flex-1 space-y-4">
-          <h1 className="text-4xl md:text-5xl font-bold">{title}</h1>
-          <p className="text-zinc-300 text-lg">{intro}</p>
-          {extra && <p className="text-zinc-400">{extra}</p>}
+          <H1>{title}</H1>
+          <P className="text-lg">{intro}</P>
+          {extra && <P>{extra}</P>}
         </FadeInUp>
 
         {/* Optional Image */}

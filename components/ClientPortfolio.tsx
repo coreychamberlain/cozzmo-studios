@@ -1,6 +1,9 @@
 "use client";
 
 import { motion } from "framer-motion";
+import P from "@/components/typography/Paragraph";
+import H2 from "./typography/H2";
+import H3 from "./typography/H3";
 
 const projects = [
   {
@@ -30,7 +33,7 @@ export default function ClientPortfolio() {
           viewport={{ once: true, amount: 0.3 }}
           transition={{ duration: 0.6 }}
         >
-          <h2 className="text-3xl font-semibold text-white mb-12">Portfolio</h2>
+          <H2>Portfolio</H2>
           <div className="grid md:grid-cols-2 gap-8">
             {projects.map((project, i) => (
               <motion.a
@@ -43,8 +46,8 @@ export default function ClientPortfolio() {
                 transition={{ duration: 0.6, delay: i * 0.2 }}
                 className="block p-6 border border-zinc-800 rounded-xl bg-zinc-900 hover:bg-zinc-800 hover:scale-105 hover:border-indigo-500 transition-transform transition-colors shadow-lg"
               >
-                <h3 className="text-xl font-medium text-white">{project.title}</h3>
-                <p className="mt-2 text-zinc-300">{project.description}</p>
+                <H3>{project.title}</H3>
+                <P>{project.description}</P>
               </motion.a>
             ))}
           </div>
