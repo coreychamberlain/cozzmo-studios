@@ -5,11 +5,11 @@ import Hero from "@/components/Hero";
 export default function AboutPage() {
   return (
     <div className="bg-black text-white">
-      {/* About mini hero */}
+      {/* About hero */}
       <Hero
         title="About Cozzmo Studios"
-        intro="Hi, I’m Corey. I’ve been a developer for 13 years and currently work as a senior developer. At Cozzmo Studios, I help small businesses get online quickly and professionally. From brand-new websites to updating existing sites, I handle it all."
-        extra="I pride myself on being friendly, understanding, and always striving to produce the best work possible. I lead projects for clients generating multi-million-pound revenues."
+        intro="Hi, I’m Corey — the developer behind Cozzmo Studios. I’ve been a developer for 13 years and currently work as a senior developer. We help small businesses get online quickly and professionally, from brand-new websites to improving existing ones."
+        extra="We pride ourselves on being friendly, approachable, and always striving to produce the best work possible. We lead projects for clients generating multi-million-pound revenues."
         imageSrc="/img/me.jpg"
       />
 
@@ -18,22 +18,34 @@ export default function AboutPage() {
         <FadeInUp className="space-y-4">
           <h2 className="text-2xl font-semibold text-white">What I Do</h2>
           <p className="text-zinc-300">
-            I build websites using modern tools like Next.js, Tailwind CSS, and React. From responsive layouts to smooth animations, my focus is creating sites that look great and perform well. I also offer email setup, hosting guidance, and domain management, making the process seamless for business owners.
+            I build modern, high-quality websites using technologies like Next.js, React, and Tailwind CSS.
+            My focus is on clean design, strong performance, and a smooth user experience — whether that’s a simple
+            business website or a more custom build.
           </p>
           <p className="text-zinc-400">
-            With 13 years of development experience and my current role as a senior developer, I bring professional expertise and best practices to every project. I lead client projects that generate multi-million-pound revenues, and I always aim to deliver the highest quality work while being friendly and understanding throughout the process.
+            Alongside development, I offer help with email setup, domains, hosting, and ongoing maintenance, so you don’t
+            need to juggle multiple providers or technical decisions.
           </p>
         </FadeInUp>
 
         <FadeInUp className="space-y-4">
           <h2 className="text-2xl font-semibold text-white">How I Work</h2>
           <p className="text-zinc-300">
-            Every project starts with understanding your business and goals. I aim to make the process simple and transparent, from the first conversation to launch and ongoing maintenance. I also collaborate with designers when needed for premium, fully custom builds.
+            I’m based in <strong>Derby, England</strong>, and I’m always happy to meet clients face-to-face where possible.
+            Building a real working relationship is important to me, especially for long-term projects.
+          </p>
+          <p className="text-zinc-400">
+            Communication is key — I offer regular check-ins, calls, and updates throughout a project so you always know
+            where things stand. My aim is to make the process clear, collaborative, and stress-free from start to finish.
           </p>
         </FadeInUp>
 
         <FadeInUp className="text-zinc-300">
-          If you’re ready to get online or improve your existing site, <a href="/contact" className="text-primary underline">get in touch</a> and let’s make it happen.
+          If you’re ready to get online or improve an existing site,&nbsp;
+          <a href="/contact" className="text-primary underline">
+            get in touch
+          </a>{" "}
+          and let’s see how I can help.
         </FadeInUp>
       </Container>
     </div>

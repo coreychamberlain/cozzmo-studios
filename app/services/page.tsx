@@ -7,13 +7,13 @@ const services = [
     title: "Complete Website Setup",
     slug: "complete-setup",
     intro:
-      "We create a 4–5 page website including a professional contact form. We also handle domain registration and hosting setup, but note domain and hosting costs vary depending on provider and are not included in the price.",
+      "We build modern, responsive websites similar to this one — typically 4–5 core pages, contact forms, and a clean, professional layout.",
     extra:
-      "Perfect for new businesses looking to get online quickly. We'll guide you through every step, from choosing your domain to launching your fully functional site.",
+      "These sites are ideal for small businesses looking to establish a strong online presence quickly and affordably, with room to grow later if needed.",
     price: "From £500",
   },
   {
-    title: "Custom Website Builds",
+    title: "Custom & Bespoke Builds",
     slug: "custom-builds",
     intro:
       "Fully custom websites designed to your exact specifications. Whether you need unique layouts, custom features, or premium design collaboration, we can deliver a polished, professional site.",
@@ -47,7 +47,7 @@ export default function ServicesPage() {
       {/* Hero */}
       <Hero
         title="Our Services"
-        intro="Below is an overview of the services we offer. Click each service on the homepage to jump here for more detail."
+        intro="Below is an overview of the services we offer and how we work. From fixed-price website builds to ongoing maintenance and custom projects, we keep things clear, flexible, and transparent."
         // No image passed
       />
 

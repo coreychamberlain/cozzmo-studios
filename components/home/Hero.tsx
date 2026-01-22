@@ -55,10 +55,7 @@ export default function Hero() {
           transition={{ delay: 1.0, duration: 0.6 }}
           className="text-zinc-300 text-lg max-w-2xl"
         >
-          Cozzmo Studios helps small businesses establish a professional online
-          presence quickly and confidently. We handle everything from website
-          design to domain registration and hosting setup, or we can improve and
-          extend your existing site — so you can focus on running your business.
+          We help small businesses get online with fast, modern, professional websites — built to look great, perform well, and grow with your business. We help small businesses get online with fast, modern, professional websites — built to look great, perform well, and grow with your business.
         </motion.p>
 
         {/* Buttons */}
@@ -68,8 +65,8 @@ export default function Hero() {
           variants={buttonVariants}
           className="mt-6 flex flex-wrap gap-4"
         >
-          <ButtonPrimary href="/contact">Start Your Website</ButtonPrimary>
-          <ButtonSecondary href="/services">Explore Services</ButtonSecondary>
+          <ButtonPrimary href="/contact">Get in Touch</ButtonPrimary>
+          <ButtonSecondary href="/services">View Services</ButtonSecondary>
         </motion.div>
       </Container>
     </div>
