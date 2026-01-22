@@ -20,8 +20,7 @@ export default function AboutPage() {
         <FadeInUp className="space-y-4">
           <H2>What I Do</H2>
           <P>
-            I build modern, high-quality websites using technologies like
-            Next.js, React, and Tailwind CSS. My focus is on clean design,
+            I build modern, high-quality websites using the latest web technologies. My focus is on clean design,
             strong performance, and a smooth user experience — whether that’s a
             simple business website or a more custom build.
           </P>
