@@ -10,7 +10,7 @@ export default function ContactPage() {
         intro="Have a question, want to get started, or need a quote? Send us a message using the form below, and we'll get back to you as soon as possible."
       />
 
-      <Container className="py-20">
+      <Container className="pb-20">
         <ContactForm />
       </Container>
     </div>
