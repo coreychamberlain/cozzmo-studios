@@ -10,7 +10,6 @@ function isRateLimited(ip: string) {
 
   const timestamps = rateLimitMap.get(ip) || [];
   const recent = timestamps.filter((ts) => now - ts < windowMs);
-
   recent.push(now);
   rateLimitMap.set(ip, recent);
 
@@ -31,16 +30,14 @@ export async function POST(req: Request) {
     const body = await req.json();
 
     // Honeypot → silently succeed
-    if (body.company) {
-      return NextResponse.json({ success: true });
-    }
+    if (body.company) return NextResponse.json({ success: true });
 
     const { name, email, phone, enquiry, message } = body;
 
     // Required fields
     if (!name || !email || !message) {
       return NextResponse.json(
-        { success: false, error: "Missing fields" },
+        { success: false, error: "Missing required fields" },
         { status: 400 },
       );
     }
@@ -63,9 +60,10 @@ export async function POST(req: Request) {
       },
     });
 
+    // Send the email
     await transporter.sendMail({
-      from: `"Website Contact" <hi@cozzmo-studios.co.uk>`,
-      to: "hi@cozzmo-studios.co.uk",
+      from: `"Website Contact" <${process.env.IONOS_EMAIL_USER}>`,
+      to: process.env.IONOS_EMAIL_USER,
       replyTo: email,
       subject: `New enquiry: ${enquiry}`,
       text: `
@@ -80,8 +78,18 @@ ${message}
     });
 
     return NextResponse.json({ success: true });
-  } catch (error) {
-    console.error(error);
-    return NextResponse.json({ success: false }, { status: 500 });
+  } catch (error: any) {
+    // Log full error for debugging
+    console.error("Contact API error:", error.message, error.stack);
+
+    // Show friendly message to user
+    return NextResponse.json(
+      {
+        success: false,
+        error:
+          "Something went wrong. Please try again or email us directly at hi@cozzmo-studios.co.uk",
+      },
+      { status: 500 },
+    );
   }
 }
