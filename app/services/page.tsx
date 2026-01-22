@@ -32,15 +32,6 @@ const services = [
       "Whether you need minor edits or major enhancements, we can extend your site’s functionality and ensure everything works seamlessly.",
     price: "POA",
   },
-  {
-    title: "Ongoing Maintenance & Support",
-    slug: "maintenance",
-    intro:
-      "Keep your website running smoothly with regular updates, backups, and technical support. Peace of mind for busy business owners.",
-    extra:
-      "We can handle all technical upkeep so you can focus on your business. Our maintenance ensures your site stays secure, up-to-date, and performing at its best.",
-    price: "From £30/month",
-  },
 ];
 
 export default function ServicesPage() {
@@ -56,15 +47,51 @@ export default function ServicesPage() {
       {/* Main Content */}
       <Container className="py-20 space-y-16">
         {services.map((service, index) => (
-          <FadeInUp key={service.slug} className="space-y-4" delay={index * 0.2}>
+          <FadeInUp
+            key={service.slug}
+            className="space-y-4"
+            delay={index * 0.2}
+          >
             <section id={service.slug}>
-              <H2>{service.title} </H2>
+              <H2>{service.title}</H2>
               <P>{service.intro}</P>
               <P>{service.extra}</P>
-              <P className="mt-2 font-semibold !text-primary">{service.price}</P>
+              <P className="mt-2 font-semibold !text-primary">
+                {service.price}
+              </P>
             </section>
           </FadeInUp>
         ))}
+
+        {/* Post-launch updates info */}
+        <FadeInUp className="space-y-4" delay={services.length * 0.2}>
+          <section id="maintenance">
+            <H2>Ongoing Maintenance & Support</H2>
+            <P>
+              Keep your website running smoothly with regular updates, backups,
+              and technical support — providing peace of mind for busy business
+              owners.
+            </P>
+            <P>
+              We handle all technical upkeep so you can focus on your business.
+              Our maintenance ensures your site stays secure, up-to-date, and
+              performing at its best.
+            </P>
+            <P>
+              After your website goes live, any additional updates or changes
+              are charged on an hourly basis. To make this easier to manage, we
+              offer flexible monthly update packages, giving you a set number of
+              hours each month for content updates, design improvements, or
+              adding new features.
+            </P>
+            <P>
+              These packages keep your site fresh and aligned with your business
+              needs, while giving you the convenience of predictable costs and
+              dedicated support.
+            </P>
+            <P className="mt-2 font-semibold !text-primary">From £30/month</P>
+          </section>
+        </FadeInUp>
       </Container>
     </div>
   );
