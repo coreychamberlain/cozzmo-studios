@@ -44,7 +44,7 @@ export default function Hero() {
             variants={headlineVariants}
             className="block text-primary"
           >
-            Professional Websites, Email & Digital Services
+            Custom Websites, Business Email &amp; Complete Online Setup
           </motion.span>
         </motion.h1>
 

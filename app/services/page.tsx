@@ -12,7 +12,7 @@ const services = [
       "We build modern, responsive websites similar to this one — typically 4–5 core pages, contact forms, and a clean, professional layout.",
     extra:
       "These sites are ideal for small businesses looking to establish a strong online presence quickly and affordably, with room to grow later if needed.",
-    price: "From £500",
+    price: "From £450",
   },
   {
     title: "Custom & Bespoke Builds",

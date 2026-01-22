@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useRef, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { Form } from "@/components/ui/form/Form";
 import Input from "@/components/ui/form/Input";
@@ -13,6 +13,9 @@ type Status = "idle" | "loading" | "success" | "error";
 export default function ContactForm() {
   const [status, setStatus] = useState<Status>("idle");
   const [message, setMessage] = useState("");
+  
+  // Create a ref for the status message
+  const statusRef = useRef<HTMLDivElement | null>(null);
 
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
@@ -48,9 +51,24 @@ export default function ContactForm() {
       }
     } catch {
       setStatus("error");
-      setMessage("Something went wrong. Please try again or email us directly.");
+      setMessage("Something went wrong. Please try again or email us directly at hi@cozzmo-studios.co.uk.");
     }
   };
+
+  // Scroll to the message whenever status changes to success or error
+  useEffect(() => {
+  if ((status === "success" || status === "error") && statusRef.current) {
+    const headerOffset = 80; // Adjust this to your header height in px
+    const elementPosition = statusRef.current.getBoundingClientRect().top + window.scrollY;
+    const offsetPosition = elementPosition - headerOffset;
+
+    window.scrollTo({
+      top: offsetPosition,
+      behavior: "smooth",
+    });
+  }
+}, [status]);
+
 
   return (
     <motion.div
@@ -63,6 +81,7 @@ export default function ContactForm() {
       <AnimatePresence>
         {status !== "idle" && status !== "loading" && (
           <motion.div
+            ref={statusRef} // attach ref here
             initial={{ opacity: 0, y: -8 }}
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0 }}
@@ -86,30 +105,12 @@ export default function ContactForm() {
           tabIndex={-1}
           autoComplete="off"
           className="hidden"
+          aria-label="Leave this"
         />
 
-        <Input
-          type="text"
-          name="name"
-          placeholder="Your Name"
-          required
-          maxLength={80}
-        />
-
-        <Input
-          type="email"
-          name="email"
-          placeholder="Email Address"
-          required
-          maxLength={120}
-        />
-
-        <Input
-          type="tel"
-          name="phone"
-          placeholder="Phone Number"
-          maxLength={30}
-        />
+        <Input type="text" name="name" placeholder="Your Name" required maxLength={80} />
+        <Input type="email" name="email" placeholder="Email Address" required maxLength={120} />
+        <Input type="tel" name="phone" placeholder="Phone Number" maxLength={30} />
 
         <Select name="enquiry" required>
           <option value="">Enquiry Type</option>
@@ -120,12 +121,7 @@ export default function ContactForm() {
           <option value="other">Other</option>
         </Select>
 
-        <Textarea
-          name="message"
-          placeholder="Your Message"
-          required
-          maxLength={1000}
-        />
+        <Textarea name="message" placeholder="Your Message" required maxLength={1000} />
 
         <Button type="submit" disabled={status === "loading"}>
           {status === "loading" ? "Sending…" : "Send Message"}
