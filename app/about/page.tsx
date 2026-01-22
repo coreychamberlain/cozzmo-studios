@@ -10,7 +10,7 @@ export default function AboutPage() {
       {/* About hero */}
       <Hero
         title="About Cozzmo Studios"
-        intro="Hi, I’m Corey — the developer behind Cozzmo Studios. I’ve been a developer for 13 years and currently work as a senior developer. We help small businesses get online quickly and professionally, from brand-new websites to improving existing ones."
+        intro="Hi, I’m Corey — the developer behind Cozzmo Studios. I’ve been a developer for 13 years and currently work as a senior developer. We can help businesses of any size get online quickly and professionally, from brand-new websites to improving existing ones."
         extra="We pride ourselves on being friendly, approachable, and always striving to produce the best work possible. We lead projects for clients generating multi-million-pound revenues."
         imageSrc="/img/me.jpg"
       />
