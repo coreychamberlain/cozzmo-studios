@@ -18,30 +18,30 @@ export default function AboutPage() {
       {/* Main content */}
       <Container className="py-20 space-y-16">
         <FadeInUp className="space-y-4">
-          <H2>What I Do</H2>
+          <H2>What We Do</H2>
           <P>
-            I build modern, high-quality websites using the latest web technologies. My focus is on clean design,
-            strong performance, and a smooth user experience — whether that’s a
+            We build modern, high-quality websites using the latest web technologies. Our focus is on clean design,
+            strong performance and a smooth user experience — whether that’s a
             simple business website or a more custom build.
           </P>
           <P>
-            Alongside development, I offer help with email setup, domains,
-            hosting, and ongoing maintenance, so you don’t need to juggle
+            Alongside development, we offer help with email setup, domains,
+            hosting and ongoing maintenance so you don’t need to juggle
             multiple providers or technical decisions.
           </P>
         </FadeInUp>
 
         <FadeInUp className="space-y-4">
-          <H2>How I Work</H2>
+          <H2>How We Work</H2>
           <P>
-            I’m based in <strong>Derby, England</strong>, and I’m always happy
+            We're based in <strong>Derby, England</strong>, and are always happy
             to meet clients face-to-face where possible. Building a real working
-            relationship is important to me, especially for long-term projects.
+            relationship is important to us, especially for long-term projects.
           </P>
           <P>
-            Communication is key — I offer regular check-ins, calls, and updates
-            throughout a project so you always know where things stand. My aim
-            is to make the process clear, collaborative, and stress-free from
+            Communication is key — we offer regular check-ins, calls, and updates
+            throughout a project so you always know where things stand. Our aim
+            is to make the process clear, collaborative and stress-free from
             start to finish.
           </P>
         </FadeInUp>
@@ -51,7 +51,7 @@ export default function AboutPage() {
           <a href="/contact" className="text-primary underline">
             get in touch
           </a>{" "}
-          and let’s see how I can help.
+          and let’s see how wecan help.
         </FadeInUp>
       </Container>
     </div>
