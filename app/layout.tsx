@@ -2,7 +2,7 @@ import Footer from "@/components/Footer";
 import "./globals.css";
 import { Providers } from "./providers";
 import Navbar from "@/components/NavBar";
-import StructuredData from "@/components/home/StructuredData";
+import StructuredData from "@/components/StructuredData/StructuredData";
 
 export const metadata = {
   title: "Cozzmo Studios - Websites, Email & Domain Setup",

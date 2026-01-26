@@ -3,7 +3,7 @@ import FadeInUp from "@/components/ui/FadeInUp";
 import Hero from "@/components/Hero";
 import P from "@/components/typography/Paragraph";
 import H2 from "@/components/typography/H2";
-import ServicesStructuredData from "@/component/StructuredData/ServicesStructuredData";
+import ServicesStructuredData from "@/components/StructuredData/ServicesStructuredData";
 const services = [
   {
     title: "Complete Website Setup",
