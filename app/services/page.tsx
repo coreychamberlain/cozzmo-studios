@@ -3,7 +3,7 @@ import FadeInUp from "@/components/ui/FadeInUp";
 import Hero from "@/components/Hero";
 import P from "@/components/typography/Paragraph";
 import H2 from "@/components/typography/H2";
-
+import ServicesStructuredData from "@/component/StructuredData/ServicesStructuredData";
 const services = [
   {
     title: "Complete Website Setup",
@@ -51,44 +51,46 @@ const services = [
   {
     title: "Professional Business Email Setup",
     slug: "email-setup",
-    intro: "If you don’t need a website right now but want your business to look more professional, a custom email address is a great place to start. An email like you@yourbusiness.co.uk instantly builds trust, looks credible, and helps you stand out from competitors still using generic email providers.",
+    intro:
+      "If you don’t need a website right now but want your business to look more professional, a custom email address is a great place to start. An email like you@yourbusiness.co.uk instantly builds trust, looks credible, and helps you stand out from competitors still using generic email providers.",
     extra: [
       "We handle the full setup for you — from registering or connecting your domain to configuring your email accounts securely across your devices. Whether you need a single inbox or multiple addresses for your team, we’ll make sure everything works smoothly and reliably from day one.",
-      "It’s a simple, cost-effective way to professionalise your business communications, and it can always be expanded later if you decide to add a website or other digital services."
+      "It’s a simple, cost-effective way to professionalise your business communications, and it can always be expanded later if you decide to add a website or other digital services.",
     ],
-    price: "POA - Depends on requirements"
-  }
+    price: "POA - Depends on requirements",
+  },
 ];
 
 export default function ServicesPage() {
   return (
-    <div className="bg-black text-white">
-      <Hero
-        title="Our Services"
-        intro="Below is an overview of the services we offer and how we work. From fixed-price website builds to ongoing maintenance and custom projects, we keep things clear, flexible, and transparent."
-        extra="Not sure what you need yet? No problem. We offer a free, no-obligation consultation to understand your business, your goals, and what will work best for you online. You’ll get clear advice, honest recommendations and a simple plan — no jargon, no pressure."
-      />
+    <>
+      <div className="bg-black text-white">
+        <Hero
+          title="Our Services"
+          intro="Below is an overview of the services we offer and how we work. From fixed-price website builds to ongoing maintenance and custom projects, we keep things clear, flexible, and transparent."
+          extra="Not sure what you need yet? No problem. We offer a free, no-obligation consultation to understand your business, your goals, and what will work best for you online. You’ll get clear advice, honest recommendations and a simple plan — no jargon, no pressure."
+        />
 
-      <Container className="py-20 space-y-16">
-        {services.map((service, index) => (
-          <FadeInUp
-            key={service.slug}
-            className="space-y-4"
-            delay={index * 0.2}
-          >
-            <section id={service.slug}>
-              <H2>{service.title}</H2>
-              <P>{service.intro}</P>
-              {service.extra?.map((item, idx) => (
-                <P key={idx}>{item}</P>
-              ))}
-              <P className="mt-2 font-semibold !text-primary">
-                {service.price}
-              </P>
-            </section>
-          </FadeInUp>
-        ))}
-      </Container>
-    </div>
+        <Container className="py-20 space-y-16">
+          {services.map((service, index) => (
+            <FadeInUp
+              key={service.slug}
+              className="space-y-4"
+              delay={index * 0.2}
+            >
+              <section id={service.slug}>
+                <H2>{service.title}</H2>
+                <P>{service.intro}</P>
+                {service.extra?.map((item, idx) => <P key={idx}>{item}</P>)}
+                <P className="mt-2 font-semibold !text-primary">
+                  {service.price}
+                </P>
+              </section>
+            </FadeInUp>
+          ))}
+        </Container>
+      </div>
+      <ServicesStructuredData />
+    </>
   );
 }
