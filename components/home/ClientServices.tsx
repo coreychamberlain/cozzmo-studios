@@ -93,6 +93,13 @@ export default function ClientServices() {
               for your business, explain your options and give you a clear plan
               moving forward, so you can decide what works best for you.
             </P>
+            <Link
+              className="text-primary hover:underline"
+              href={`/services#consultation`}
+              scroll={false}
+            >
+              Learn more
+            </Link>
           </motion.div>
         </div>
       </div>

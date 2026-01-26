@@ -16,6 +16,17 @@ const services = [
     price: "From £450",
   },
   {
+    title: "Professional Business Email Setup",
+    slug: "email-setup",
+    intro:
+      "If you don’t need a website right now but want your business to look more professional, a custom email address is a great place to start. An email like you@yourbusiness.co.uk instantly builds trust, looks credible, and helps you stand out from competitors still using generic email providers.",
+    extra: [
+      "We handle the full setup for you — from registering or connecting your domain to configuring your email accounts securely across your devices. Whether you need a single inbox or multiple addresses for your team, we’ll make sure everything works smoothly and reliably from day one.",
+      "It’s a simple, cost-effective way to professionalise your business communications, and it can always be expanded later if you decide to add a website or other digital services.",
+    ],
+    price: "POA - Depends on requirements",
+  },
+  {
     title: "Custom & Bespoke Builds",
     slug: "custom-builds",
     intro:
@@ -47,17 +58,6 @@ const services = [
       "These packages keep your site fresh and aligned with your business needs, while giving you the convenience of predictable costs and dedicated support.",
     ],
     price: "From £30/month",
-  },
-  {
-    title: "Professional Business Email Setup",
-    slug: "email-setup",
-    intro:
-      "If you don’t need a website right now but want your business to look more professional, a custom email address is a great place to start. An email like you@yourbusiness.co.uk instantly builds trust, looks credible, and helps you stand out from competitors still using generic email providers.",
-    extra: [
-      "We handle the full setup for you — from registering or connecting your domain to configuring your email accounts securely across your devices. Whether you need a single inbox or multiple addresses for your team, we’ll make sure everything works smoothly and reliably from day one.",
-      "It’s a simple, cost-effective way to professionalise your business communications, and it can always be expanded later if you decide to add a website or other digital services.",
-    ],
-    price: "POA - Depends on requirements",
   },
 ];
 

@@ -7,7 +7,7 @@ export default function Footer() {
 
         {/* Right: Email & copyright */}
         <div className="text-zinc-300 text-sm text-center md:text-right">
-          <div>Email: <a href="mailto:hi@cozzmostudios.co.uk" className="text-primary underline">hi@cozzmostudios.co.uk</a></div>
+          <div>Email: <a href="mailto:hi@cozzmostudios.co.uk" className="text-primary hover:underline">hi@cozzmostudios.co.uk</a></div>
           <div className="mt-2">&copy; {new Date().getFullYear()} Cozzmo Studios</div>
         </div>
       </div>
