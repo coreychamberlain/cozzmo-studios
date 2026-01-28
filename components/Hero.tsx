@@ -27,10 +27,10 @@ export default function Hero({ title, intro, extra, imageSrc, className = "" }: 
         {/* Optional Image */}
         {imageSrc && (
           <FadeInUp
-            className="flex-shrink-0 w-48 h-48 md:w-64 md:h-64 relative rounded-xl overflow-hidden"
+            className="flex-shrink-0 w-64 h-auto md:w-64 relative rounded-xl overflow-hidden"
             delay={0.2}
           >
-            <Image src={imageSrc} alt={title} fill className="object-cover rounded-xl" priority />
+            <Image src={imageSrc} alt={title} width={150} height={150} className="w-full rounded-xl" priority quality={100} />
           </FadeInUp>
         )}
       </div>

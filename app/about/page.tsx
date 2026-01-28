@@ -12,7 +12,7 @@ export default function AboutPage() {
         title="About Cozzmo Studios"
         intro="Hi, I’m Corey — the developer behind Cozzmo Studios. I’ve been a developer for 13 years and currently work as a senior developer. We can help businesses of any size get online quickly and professionally, from brand-new websites to improving existing ones."
         extra="We pride ourselves on being friendly, approachable, and always striving to produce the best work possible. We lead projects for clients generating multi-million-pound revenues."
-        imageSrc="/img/me.jpg"
+        imageSrc="/img/corey-dev.jpg"
       />
 
       {/* Main content */}
@@ -34,7 +34,7 @@ export default function AboutPage() {
         <FadeInUp className="space-y-4">
           <H2>How We Work</H2>
           <P>
-            We're based in <strong>Derby, England</strong>, and are always happy
+            We&apos;re based in <strong>Derby, England</strong>, and are always happy
             to meet clients face-to-face where possible. Building a real working
             relationship is important to us, especially for long-term projects.
           </P>

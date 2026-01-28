@@ -14,6 +14,12 @@ const services = [
     slug: "complete-setup",
   },
   {
+    title: "Professional Business Email Setup",
+    intro:
+      "An email like you@yourbusiness.co.uk instantly builds trust, looks credible, and helps you stand out from competitors still using generic email providers. We can set this up for you.",
+    slug: "email-setup",
+  },
+  {
     title: "Custom Website Builds",
     intro:
       "Fully custom websites designed to your specifications. Unique layouts, features, or premium design collaboration available.",
@@ -58,7 +64,7 @@ export default function ClientServices() {
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true, amount: 0.3 }}
                   transition={{ duration: 0.6, delay: i * 0.2 }}
-                  className="p-6 border border-zinc-800 rounded-xl bg-zinc-900 hover:bg-zinc-800 hover:scale-105 hover:border-primary transition-transform transition-colors shadow-lg"
+                  className="p-6 border border-zinc-800 rounded-xl bg-zinc-900 hover:bg-zinc-800 hover:scale-105 hover:border-primary transition-transform transition-colors shadow-lg md:last:col-span-2"
                 >
                   <Link href={`/services#${service.slug}`} scroll={false}>
                     <H3>{service.title}</H3>
